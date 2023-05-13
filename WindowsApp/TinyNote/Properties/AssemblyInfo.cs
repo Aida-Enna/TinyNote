@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tinote")]
+[assembly: AssemblyTitle("TinyNote")]
 [assembly: AssemblyDescription("Lightweight cross-platform note-taking application with RTF support")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Module Art")]
-[assembly: AssemblyProduct("Tinote")]
-[assembly: AssemblyCopyright("Copyright © 2020 Module Art")]
+[assembly: AssemblyCompany("Aida Enna")]
+[assembly: AssemblyProduct("TinyNote")]
+[assembly: AssemblyCopyright("Copyright © 2023 Aida Enna")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

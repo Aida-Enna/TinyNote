@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	public partial class AboutForm : Form
 	{
@@ -82,17 +82,12 @@ namespace quick_sticky_notes
 
 		private void githubBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/ModuleArt/tinote");
-		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			Process.Start("https://moduleart.github.io/");
+			Process.Start("https://github.com/Aida-Enna/TinyNote");
 		}
 
 		private void donateBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://www.patreon.com/moduleart");
+			Process.Start("https://www.patreon.com/PSO2");
 		}
 	}
 }

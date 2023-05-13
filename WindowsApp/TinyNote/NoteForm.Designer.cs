@@ -1,4 +1,4 @@
-﻿namespace quick_sticky_notes
+﻿namespace TinyNote
 {
 	partial class NoteForm
 	{
@@ -74,8 +74,8 @@
 			this.rightAlignToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.infoToolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.resizeBtn = new System.Windows.Forms.Button();
-			this.richTextBox1 = new quick_sticky_notes.CustomRichTextBox();
-			this.customScrollbar1 = new quick_sticky_notes.CustomScrollbar();
+			this.richTextBox1 = new TinyNote.CustomRichTextBox();
+			this.customScrollbar1 = new TinyNote.CustomScrollbar();
 			this.titlePanel.SuspendLayout();
 			this.headerContext.SuspendLayout();
 			this.rmbContext.SuspendLayout();
@@ -244,7 +244,7 @@
 			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = global::quick_sticky_notes.Properties.Resources.white_close;
+			this.closeBtn.Image = global::TinyNote.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(224, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
@@ -551,7 +551,7 @@
 			this.customScrollbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.customScrollbar1.ChannelColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(128)))));
-			this.customScrollbar1.DownArrowImage = global::quick_sticky_notes.Properties.Resources.sb_downarrow_y;
+			this.customScrollbar1.DownArrowImage = global::TinyNote.Properties.Resources.sb_downarrow_y;
 			this.customScrollbar1.LargeChange = 10;
 			this.customScrollbar1.Location = new System.Drawing.Point(239, 32);
 			this.customScrollbar1.Margin = new System.Windows.Forms.Padding(0);
@@ -562,8 +562,8 @@
 			this.customScrollbar1.Size = new System.Drawing.Size(17, 207);
 			this.customScrollbar1.SmallChange = 1;
 			this.customScrollbar1.TabIndex = 16;
-			this.customScrollbar1.ThumbMiddleImage = global::quick_sticky_notes.Properties.Resources.sb_thumbmiddle_y;
-			this.customScrollbar1.UpArrowImage = global::quick_sticky_notes.Properties.Resources.sb_uparrow_y;
+			this.customScrollbar1.ThumbMiddleImage = global::TinyNote.Properties.Resources.sb_thumbmiddle_y;
+			this.customScrollbar1.UpArrowImage = global::TinyNote.Properties.Resources.sb_uparrow_y;
 			this.customScrollbar1.Value = 0;
 			this.customScrollbar1.Visible = false;
 			this.customScrollbar1.Scroll += new System.EventHandler(this.customScrollbar1_Scroll);

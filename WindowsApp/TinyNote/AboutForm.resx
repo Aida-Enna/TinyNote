@@ -124,7 +124,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAADX5JREFUeF7tnWvMHUUdh4tcpIBcFShVW1pBerGNpfeLSC1YC1I+aFEUNDbGGD9Y
+        wQAADsEBuJFr7QAADX5JREFUeF7tnWvMHUUdh4tcpIBcFShVW1pBerGNpfeLSC1YC1I+aFEUNDbGGD9Y
         o+ELkcZbSUhA+MBFwIbkJaURRBto1LRNS7WWIgbbajVRjIkCxWoN4gUv6fp/TmeO233/u7PnzJ7zzrxn
         JnkItLtnzu7z29m57FnGdFGOE16XCBLc9KRY6ScIJwonGV6fCALrAzc4ajQMVjwVjRVOEU4VTjO8ITGi
         WA84wQ2OcGWD4FWOF/gwPphKzhDOFM4WzhHemAgCXOAENzjCFc5oFXDYVSFBJwtWPJW8SThPGCeMF95s
@@ -183,17 +183,6 @@
         GpBuOoiEgbRz4EAwBgmOmePnPHA+OC9cKLSarKtEL98WQnCCwEERBA6Q5o2DJRAkflDh+DkPnA/OC+eH
         VnPUyLeFg+GgCAIHSBho4jjgxNFzwXnh/HDBjCr5+cKBcYA2DImjcD4iFT9mzP8AiWNYFcVJjMcAAAAA
         SUVORK5CYII=
-</value>
-  </data>
-  <data name="developerBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAQ9JREFUOE+N081Kw0AUhuFxEVeusnDvMuDedXcN6KXkZnIdIyLSlmJEpviDolQx
-        hqKU6gXkBrI5fqecA9NwKv3ggZLOO6vEbV1VZzAWmTzdYVWdQgkdkODf/CyVU8aqOoECWtCwj//jM4lU
-        sqrOoQErsvDZXGrs8oHc9N06aDq4bejkeUlSYz7Q2tUTuesPM2L7N590/PhNp2+/dAZSY3oBO5+RG71s
-        hHtwdP9Fw/nPOlRSY/EF6uKO3GROh7MFDV5XG+FuFwgrVFJjRqisUEmNGaGyQiU1ZoTKCpXUmA85NHGo
-        rBAaiF4kng8JFNBqzHphCwX0XuV4PqRQQhdd0EEJ/3xM/fmQwRgR2/I5O/cHvunfCBChonkAAAAASUVO
-        RK5CYII=
 </value>
   </data>
 </root>

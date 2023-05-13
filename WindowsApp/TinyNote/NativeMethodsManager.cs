@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	public static class NativeMethodsManager
 	{

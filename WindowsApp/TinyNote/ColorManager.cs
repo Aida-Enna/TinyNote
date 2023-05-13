@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	public static class ColorManager
 	{

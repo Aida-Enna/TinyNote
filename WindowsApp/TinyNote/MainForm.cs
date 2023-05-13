@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	public partial class MainForm : Form
 	{
@@ -438,11 +438,7 @@ namespace quick_sticky_notes
             {
                 if (e.Shift)
                 {
-                    if (e.KeyCode == Keys.P)
-                    {
-                        profileBtn.PerformClick();
-                    }
-                    else if (e.KeyCode == Keys.T)
+                    if (e.KeyCode == Keys.T)
                     {
                         emptyTrashToolStripMenuItem.PerformClick();
                     }

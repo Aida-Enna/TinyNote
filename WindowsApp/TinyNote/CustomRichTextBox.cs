@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	class CustomRichTextBox : RichTextBox
 	{

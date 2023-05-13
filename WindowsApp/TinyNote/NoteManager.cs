@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	public class NoteManager
 	{
@@ -66,7 +66,7 @@ namespace quick_sticky_notes
 
 		public void RemoveNote(Note note)
 		{
-			string notesFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tinote", "notes");
+			string notesFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TinyNote", "notes");
 			DirectoryInfo di = new DirectoryInfo(notesFolder);
 
 			if (!di.Exists)
@@ -86,7 +86,7 @@ namespace quick_sticky_notes
 		{
 			try
 			{
-				string notesFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tinote", "notes");
+				string notesFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TinyNote", "notes");
 				DirectoryInfo di = new DirectoryInfo(notesFolder);
 
 				if (!di.Exists)
@@ -125,7 +125,7 @@ namespace quick_sticky_notes
 
 			if (!noteExists)
 			{
-				string notePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tinote", "notes", data.i);
+				string notePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TinyNote", "notes", data.i);
 
 				if (!File.Exists(notePath))
 				{
@@ -150,7 +150,7 @@ namespace quick_sticky_notes
 		{
 			try
 			{
-				string appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tinote", "notes");
+				string appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TinyNote", "notes");
 				DirectoryInfo di = new DirectoryInfo(appDataFolder);
 
 				if (!di.Exists)

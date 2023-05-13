@@ -1,4 +1,4 @@
-﻿namespace quick_sticky_notes
+﻿namespace TinyNote
 {
 	public class NoteData
 	{

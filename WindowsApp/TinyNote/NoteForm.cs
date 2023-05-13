@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 
-namespace quick_sticky_notes
+namespace TinyNote
 {
 	public partial class NoteForm : Form
 	{
