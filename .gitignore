@@ -46,3 +46,14 @@ WindowsApp\quick-sticky-notes\[Oo]bj\
 [Bb]ackup/
 bin
 obj
+/WindowsApp/quick-sticky-notes/obj/Debug/quick_sticky_notes.Properties.Resources.resources
+/WindowsApp/quick-sticky-notes/obj/Debug/quick_sticky_notes.NoteForm.resources
+/WindowsApp/quick-sticky-notes/obj/Debug/quick_sticky_notes.MainForm.resources
+/WindowsApp/quick-sticky-notes/obj/Debug/quick_sticky_notes.AboutForm.resources
+/WindowsApp/quick-sticky-notes/obj/Debug/quick-sticky-notes.pdb
+/WindowsApp/quick-sticky-notes/obj/Debug/quick-sticky-notes.exe
+/WindowsApp/quick-sticky-notes/obj/Debug/quick-sticky-notes.csproj.GenerateResource.cache
+/WindowsApp/quick-sticky-notes/obj/Debug/quick-sticky-notes.csproj.FileListAbsolute.txt
+/WindowsApp/quick-sticky-notes/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/WindowsApp/quick-sticky-notes/bin/Debug/quick-sticky-notes.pdb
+/WindowsApp/quick-sticky-notes/bin/Debug/quick-sticky-notes.exe
