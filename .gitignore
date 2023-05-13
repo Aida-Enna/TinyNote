@@ -44,4 +44,5 @@ WindowsApp\quick-sticky-notes\[Oo]bj\
 .vs/
 [Pp]ackages/
 [Bb]ackup/
-/WindowsApp/quick-sticky-notes/bin/*
+bin
+obj
