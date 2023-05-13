@@ -18,7 +18,6 @@
 *.ide-shm
 *.ide-wal
 *.vsidx
-WindowsApp/quick-sticky-notes/bin/Debug/firebaseAdminCredentials.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -37,8 +36,6 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-WindowsApp/quick-sticky-notes/[Bb]in
-WindowsApp/quick-sticky-notes/[Oo]bj
 [Ll]og/
 [Ll]ogs/
 .vs/
