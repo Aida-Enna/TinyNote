@@ -37,8 +37,8 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-*/[Bb]in/
-*/[Oo]bj/
+WindowsApp\quick-sticky-notes\[Bb]in\
+WindowsApp\quick-sticky-notes\[Oo]bj\
 [Ll]og/
 [Ll]ogs/
 .vs/
