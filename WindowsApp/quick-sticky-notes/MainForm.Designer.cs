@@ -301,20 +301,6 @@
 			this.searchPanel.Size = new System.Drawing.Size(247, 32);
 			this.searchPanel.TabIndex = 8;
 			// 
-			// profileBtn
-			// 
-			this.profileBtn.FlatAppearance.BorderSize = 0;
-			this.profileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.profileBtn.Image = ((System.Drawing.Image)(resources.GetObject("profileBtn.Image")));
-			this.profileBtn.Location = new System.Drawing.Point(0, 0);
-			this.profileBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.profileBtn.Name = "profileBtn";
-			this.profileBtn.Size = new System.Drawing.Size(32, 32);
-			this.profileBtn.TabIndex = 9;
-			this.infoToolTip.SetToolTip(this.profileBtn, "Profile (Ctrl+Shift+P)");
-			this.profileBtn.UseVisualStyleBackColor = true;
-			this.profileBtn.Click += new System.EventHandler(this.profileBtn_Click);
-			// 
 			// newNoteBtn
 			// 
 			this.newNoteBtn.ContextMenuStrip = this.notesListEmptyContext;

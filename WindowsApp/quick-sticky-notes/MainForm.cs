@@ -8,7 +8,6 @@ namespace quick_sticky_notes
 {
 	public partial class MainForm : Form
 	{
-        private FirebaseManager fm;
         private NoteManager noteManager;
         private bool quitApp = false;
         private AboutForm aboutForm;
@@ -32,11 +31,6 @@ namespace quick_sticky_notes
 
             noteManager = new NoteManager();
             noteManager.NoteAdded += NoteManager_NoteAdded;
-
-            fm = new FirebaseManager();
-            fm.UpdateNote += Fm_UpdateNote;
-            fm.SignStatusChanged += Fm_SignStatusChanged;
-            fm.LoadUserFromDisk();
         }
 
         private void closeBtn_MouseEnter(object sender, EventArgs e)
@@ -47,17 +41,6 @@ namespace quick_sticky_notes
         private void closeBtn_MouseLeave(object sender, EventArgs e)
         {
             closeBtn.Image = Properties.Resources.black_close;
-        }
-
-        private void Fm_SignStatusChanged(object sender, EventArgs e)
-        {
-            //syncBtn.Visible = fm.IsLoggedIn();
-        }
-
-        private void Fm_UpdateNote(object sender, UpdateNoteEventArgs e)
-        {
-            noteManager.UpdateNote(e.Data);
-            notesListBox.Invalidate();
         }
 
         private void NoteManager_NoteAdded(object sender, NoteAddedEventArgs e)
@@ -75,7 +58,6 @@ namespace quick_sticky_notes
             e.Note.PositionChanged += Note_PositionChanged;
             e.Note.PerformNewNote += Note_PerformNewNote;
             e.Note.PerformMoveToTrash += Note_PerformMoveToTrash;
-            e.Note.PerformSync += Note_PerformSync;
             e.Note.ShowNotesList += Note_ShowNotesList;
             e.Note.ColorChanged += Note_ColorChanged;
             e.Note.FolderChanged += Note_FolderChanged;
@@ -111,12 +93,9 @@ namespace quick_sticky_notes
             this.BringToFront();
         }
 
-        private void Note_PerformSync(object sender, EventArgs e)
+        private void Note_PerformNewNote(object sender, PerformNewNoteEventArgs e)
         {
-            if (fm.IsLoggedIn())
-            {
-                fm.SyncNote(sender as Note);
-            }
+            noteManager.NewNote(DateTime.Now.Ticks.ToString());
         }
 
         private void Note_PerformMoveToTrash(object sender, EventArgs e)
@@ -128,11 +107,6 @@ namespace quick_sticky_notes
             notesListBox.Invalidate();
         }
 
-        private void Note_PerformNewNote(object sender, PerformNewNoteEventArgs e)
-        {
-            noteManager.NewNote(fm.GenerateUniqueID());
-        }
-
         private void Note_PositionChanged(object sender, PositionChangedEventArgs e)
         {
             noteManager.SaveNoteToDisk(sender as Note);
@@ -142,11 +116,6 @@ namespace quick_sticky_notes
         {
             notesListBox.Invalidate();
             noteManager.SaveNoteToDisk(sender as Note);
-        }
-
-        private void newNoteBtn_Click(object sender, EventArgs e)
-        {
-            noteManager.NewNote(fm.GenerateUniqueID());
         }
 
         private void Note_TitleChanged(object sender, TitleChangedEventArgs e)
@@ -171,18 +140,6 @@ namespace quick_sticky_notes
                 }
             }
             noteManager.SaveNoteToDisk(sender as Note);
-        }
-
-        private void profileBtn_Click(object sender, EventArgs e)
-        {
-            if (fm.IsLoggedIn())
-            {
-                fm.ShowProfileForm();
-            }
-            else
-            {
-                fm.ShowLoginForm();
-            }
         }
 
         private void notesListBox_DoubleClick_1(object sender, EventArgs e)
@@ -247,18 +204,6 @@ namespace quick_sticky_notes
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            noteManager.LoadNotesFromDisk();
-            
-            if (fm.IsLoggedIn())
-            {
-                //fm.LoadNotesFromServer();
-
-                fm.AddObserversForServer();
-            }
-        }
-
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (notesListBox.Items.Count > 0 && notesListBox.SelectedItem != null)
@@ -270,11 +215,6 @@ namespace quick_sticky_notes
 
                 notesListBox.Invalidate();
             }
-        }
-
-        private void addNoteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            noteManager.NewNote(fm.GenerateUniqueID());
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -345,7 +285,20 @@ namespace quick_sticky_notes
 
         private void newNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            noteManager.NewNote(fm.GenerateUniqueID());
+            noteManager.NewNote(DateTime.Now.Ticks.ToString());
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            noteManager.LoadNotesFromDisk();
+        }
+        private void addNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            noteManager.NewNote(DateTime.Now.Ticks.ToString());
+        }
+
+        private void newNoteBtn_Click(object sender, EventArgs e)
+        {
+            noteManager.NewNote(DateTime.Now.Ticks.ToString());
         }
 
         private void searchTextBox_Enter(object sender, EventArgs e)
@@ -697,7 +650,6 @@ namespace quick_sticky_notes
                     }
 
                     noteManager.RemoveNote(note);
-                    fm.RemoveNote(note.uniqueId);
 
                     i--;
                 }
@@ -718,7 +670,6 @@ namespace quick_sticky_notes
                 }
 
                 noteManager.RemoveNote(note);
-                fm.RemoveNote(note.uniqueId);
 
                 notesListBox.Invalidate();
             }

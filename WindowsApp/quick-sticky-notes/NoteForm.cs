@@ -145,8 +145,6 @@ namespace quick_sticky_notes
 			richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
 			resizeBtn.Visible = false;
 			//customScrollbar1.Visible = false;
-
-			OnPerformSync(e);
 		}
 
 		private void titlePanel_MouseDown(object sender, MouseEventArgs e)
@@ -238,12 +236,6 @@ namespace quick_sticky_notes
 			PerformMoveToTrash?.Invoke(this, e);
 		}
 		public event EventHandler<EventArgs> PerformMoveToTrash;
-
-		protected virtual void OnPerformSync(EventArgs e)
-		{
-			PerformSync?.Invoke(this, e);
-		}
-		public event EventHandler<EventArgs> PerformSync;
 
 		private void SelectCurLine()
 		{

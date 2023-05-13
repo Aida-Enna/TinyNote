@@ -35,7 +35,6 @@ namespace quick_sticky_notes
 				this.folderName = folderName;
 
 				OnFolderChanged(EventArgs.Empty);
-				OnPerformSync(EventArgs.Empty);
 			}
 		}
 
@@ -100,7 +99,6 @@ namespace quick_sticky_notes
 				noteForm.ResizeEnd += NoteForm_ResizeEnd;
 				noteForm.PerformNewNote += NoteForm_PerformNewNote;
 				noteForm.PerformMoveToTrash += NoteForm_PerformMoveToTrash;
-				noteForm.PerformSync += NoteForm_PerformSync;
 				noteForm.ShowNotesList += NoteForm_ShowNotesList;
 				noteForm.ColorChanged += NoteForm_ColorChanged;
 
@@ -157,11 +155,6 @@ namespace quick_sticky_notes
 		private void NoteForm_ShowNotesList(object sender, EventArgs e)
 		{
 			OnShowNotesList(e);
-		}
-
-		private void NoteForm_PerformSync(object sender, EventArgs e)
-		{
-			OnPerformSync(e);
 		}
 
 		private void NoteForm_PerformMoveToTrash(object sender, EventArgs e)
@@ -289,12 +282,6 @@ namespace quick_sticky_notes
 			PerformMoveToTrash?.Invoke(this, e);
 		}
 		public event EventHandler<EventArgs> PerformMoveToTrash;
-
-		protected virtual void OnPerformSync(EventArgs e)
-		{
-			PerformSync?.Invoke(this, e);
-		}
-		public event EventHandler<EventArgs> PerformSync;
 
 		protected virtual void OnShowNotesList(EventArgs e)
 		{
